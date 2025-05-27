@@ -13,7 +13,7 @@ Code Syntax Block plugin extends the block editor by adding syntax highlighting 
 
 == Description ==
 
-Code Syntax Block extends the WordPress block editor by adding syntax highlighting support to the core code block using the Prism syntax highlighter.
+Code Syntax Block extends the WordPress block editor by adding syntax highlighting support to the core code block using the Prism syntax highlighter. It also includes a convenient "Copy to clipboard" button for easily grabbing code snippets.
 
 The Prism syntax highlighter runs JavaScript loaded on the front-end to parse code blocks and apply syntax markup. A CSS file specifies the color and style to apply to that markup.  See [Prism syntax highlighter](https://prismjs.com) for full details.
 
@@ -23,9 +23,9 @@ Primary development and issues tracked on Github at: [https://github.com/mkaz/co
 
 After installing and activating the plugin, use in the Block Editor by creating a standard code block and selecting a language format.
 
-When creating a new code block, select Code block, and then in the Inspector (Block Controls on the Right) select the language for the code. The code will not change within the editor, but you'll see a small label with the selected language.
+When creating a new code block, select Code block, and then in the Inspector (Block Controls on the Right) select the language for the code. In the same settings panel, you can also toggle the "Show copy button" option to display a copy button on the frontend for that code block. The code will not change within the editor, but you'll see a small label with the selected language.
 
-On the front-end when the post is being viewed, the code will be color syntax highlighted.
+On the front-end when the post is being viewed, the code will be color syntax highlighted. If enabled, a copy button will appear on the code block, allowing users to easily copy its content.
 
 == Frequently Asked Questions ==
 

@@ -1,7 +1,6 @@
-
 # Code Syntax Highlighting Block
 
-A WordPress plugin which extends the WordPress Block Editor by adding syntax highlighting to the core code block.
+A WordPress plugin which extends the WordPress Block Editor by adding syntax highlighting to the core code block. It now also includes a convenient "Copy to clipboard" button for easily grabbing code snippets directly from the frontend.
 
 Example:
 
@@ -15,9 +14,9 @@ You can install the code-syntax-block plugin from your WordPress plugins page, o
 
 ## Usage
 
-When creating a new code block, select `Code` block, and then in the Inspector (Block Controls on the Right) select the language for the code. The code will not change within the editor, but you'll see a small label with the selected language.
+When creating a new code block, select `Code` block, and then in the Inspector (Block Controls on the Right) select the language for the code. The code will not change within the editor, but you'll see a small label with the selected language. In the same Inspector panel, you can also toggle the "Show copy button" option to enable or disable the copy button for that specific code block on the frontend.
 
-On the front-end when the post is being viewed, the code will be color syntax highlighted.
+On the front-end when the post is being viewed, the code will be color syntax highlighted. If enabled, a copy button will appear, allowing users to easily copy the code content.
 
 ## Customize
 
@@ -109,4 +108,3 @@ For server-side rendering, consider using Weston Ruter's [Syntax-highlighting Co
 Copyright (c) 2018-2020 Marcus Kazmierczak.
 
 Licensed under <a href="https://opensource.org/licenses/GPL-2.0"> GPL 2.0 or later </a>.
-
