@@ -101,7 +101,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	$prism_js_path   = 'assets/prism/prism.js';
 	$prism_settings_path = 'assets/prism/prism-settings.js';
 	$frontend_js_path = 'assets/js/frontend.js'; 
-	$copy_button_css_path = 'assets/copy-button.css'; 
 
 	// Enqueue prism style.
 	wp_enqueue_style(
@@ -134,13 +133,6 @@ add_action( 'wp_enqueue_scripts', function() {
 		true // In footer.
 	);
 
-	// Enqueue copy button styles.
-	wp_enqueue_style(
-		'mkaz-code-syntax-copy-button-css',
-		plugins_url( $copy_button_css_path, __FILE__ ),
-		[], // No dependencies for this simple script
-		filemtime( plugin_dir_path( __FILE__ ) . $copy_button_css_path )
-	);
 } );
 
 /**
