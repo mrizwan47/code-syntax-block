@@ -39,6 +39,10 @@ const addSyntaxToCodeBlock = ( settings ) => {
 				selector: 'pre',
 				attribute: 'title',
 			},
+			showCopyButton: {
+				type: 'boolean',
+				default: false, // Default to false
+			},
 		},
 		edit,
 		save,

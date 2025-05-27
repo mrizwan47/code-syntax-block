@@ -3,7 +3,7 @@
  * Plugin Name:  Code Syntax Block
  * Plugin URI:   https://github.com/mkaz/code-syntax-block
  * Description:  A plugin to extend Gutenberg code block with syntax highlighting
- * Version:      3.2.1
+ * Version:      3.3.0
  * Author:       Marcus Kazmierczak
  * Author URI:   https://mkaz.blog/
  * License:      GPL2
@@ -14,7 +14,7 @@
  */
 
 // version added, used in URL
-const MKAZ_CODE_SYNTAX_BLOCK_VERSION = '3.2.1';
+const MKAZ_CODE_SYNTAX_BLOCK_VERSION = '3.3.0';
 const MKAZ_CODE_SYNTAX_DEFAULT_SCHEME = 'prism-a11y-dark';
 const MKAZ_CODE_SYNTAX_COLOR_SCHEMES = array(
 	'prism-a11y-dark' => 'A11y Dark',
@@ -100,6 +100,8 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Files.
 	$prism_js_path   = 'assets/prism/prism.js';
 	$prism_settings_path = 'assets/prism/prism-settings.js';
+	$frontend_js_path = 'assets/js/frontend.js'; 
+	$copy_button_css_path = 'assets/copy-button.css'; 
 
 	// Enqueue prism style.
 	wp_enqueue_style(
@@ -122,6 +124,23 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_localize_script('mkaz-code-syntax-prism-js', 'prism_settings', array(
 		'pluginUrl' => plugin_dir_url(__FILE__),
 	));
+
+	// Enqueue frontend script for copy button functionality.
+	wp_enqueue_script(
+		'mkaz-code-syntax-frontend-js',
+		plugins_url( $frontend_js_path, __FILE__ ),
+		[], // No dependencies for this simple script
+		filemtime( plugin_dir_path( __FILE__ ) . $frontend_js_path ),
+		true // In footer.
+	);
+
+	// Enqueue copy button styles.
+	wp_enqueue_style(
+		'mkaz-code-syntax-copy-button-css',
+		plugins_url( $copy_button_css_path, __FILE__ ),
+		[], // No dependencies for this simple script
+		filemtime( plugin_dir_path( __FILE__ ) . $copy_button_css_path )
+	);
 } );
 
 /**

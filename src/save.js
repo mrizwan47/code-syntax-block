@@ -12,6 +12,15 @@ const save = ( { attributes } ) => {
 	return (
 		<>
 			<pre { ...blockProps }>
+				{ attributes.showCopyButton && (
+					<button
+						type="button"
+						className="code-syntax-block-copy-button"
+						aria-label="Copy code to clipboard"
+					>
+						Copy
+					</button>
+				) }
 				<RichText.Content
 					tagName="code"
 					value={

@@ -5,7 +5,7 @@ Tags: code, code syntax, syntax highlight, code highlighting
 Requires at least: 5.6
 Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 3.2.1
+Stable tag: 3.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,6 +103,10 @@ Example:
 2. In Editor Example
 
 == Changelog ==
+
+= 3.3.0 =
+
+- Add: "Copy to clipboard" button for code blocks (configurable in block settings).
 
 = 3.2.1
 
@@ -249,4 +253,3 @@ Add filters for customizing language list, and default language.
 = 1.0 =
 
 Initial WordPress Plugin Repository releases, include upgrade Prism to 1.16.0 and new default One Dark theme.
-

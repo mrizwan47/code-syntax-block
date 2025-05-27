@@ -21,7 +21,7 @@ import { __ } from '@wordpress/i18n';
 /* global mkaz_code_syntax_languages, mkaz_code_syntax_default_lang, Prism */
 
 const edit = ( { attributes, setAttributes } ) => {
-	const { colorScheme, content, language, lineNumbers, title } = attributes;
+	const { colorScheme, content, language, lineNumbers, title, showCopyButton } = attributes;
 
 	useEffect( () => {
 		if ( ! language && mkaz_code_syntax_default_lang ) {
@@ -69,6 +69,15 @@ const edit = ( { attributes, setAttributes } ) => {
 							checked={ lineNumbers }
 							onChange={ ( state ) =>
 								setAttributes( { lineNumbers: state } )
+							}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label={ __( 'Show copy button', 'code-syntax-block' ) }
+							checked={ showCopyButton }
+							onChange={ ( state ) =>
+								setAttributes( { showCopyButton: state } )
 							}
 						/>
 					</PanelRow>
